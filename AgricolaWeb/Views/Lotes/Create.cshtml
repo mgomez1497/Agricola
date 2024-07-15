@@ -1,0 +1,40 @@
+﻿@model AgricolaWeb.Models.Lotes
+
+@{
+    ViewData["Title"] = "Crear Nuevo Lote";
+    int farmId = ViewData["FarmId"] != null ? (int)ViewData["FarmId"] : 0;
+}
+
+<h2>Crear Nuevo Lote</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Arboles" class="control-label"></label>
+        <input asp-for="Arboles" class="form-control" />
+        <span asp-validation-for="Arboles" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Etapa" class="control-label"></label>
+        <input asp-for="Etapa" class="form-control" />
+        <span asp-validation-for="Etapa" class="text-danger"></span>
+    </div>
+
+    <!-- Input oculto para enviar IdFinca -->
+    <input type="hidden" asp-for="IdFinca" />
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="GetByFarmId" asp-controller="Lotes" asp-route-farmId="" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AgricolaWeb.Models.Finca>
+
+@{
+    ViewData["Title"] = "Lista de Fincas";
+}
+
+<h1>Lista de Fincas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Agregar Nueva Finca</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Ubicación
+            </th>
+            <th>
+                Hectáreas
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ubicacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hectareas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">
+                        <i class="fas fa-info-circle"></i> Detalle
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

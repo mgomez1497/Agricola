@@ -1,0 +1,52 @@
+﻿@model List<AgricolaWeb.Models.Lotes>
+
+@{
+    ViewData["Title"] = "Lotes por Finca";
+    
+   
+}
+
+<h1>Lotes por Finca</h1>
+
+<p>
+    <a asp-action="Create" asp-controller="Lotes" class="btn btn-primary">Agregar Nuevo Lote</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Etapa</th>
+            <th>Arboles</th>
+            <th>Acciones</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lote in Model)
+        {
+            <tr>
+                <td>@lote.Id</td>
+                <td>@lote.Nombre</td>
+                <td>@lote.Etapa</td>
+                <td>@lote.Arboles</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@lote.Id" class="btn btn-info">
+                        <i class="fas fa-info-circle"></i> Detalle
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@lote.Id" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@lote.Id" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Eliminar
+                    </a>
+                    <a asp-action="GetByLotId" asp-controller="Grupos" asp-route-id="@lote.Id" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Grupos
+                    </a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

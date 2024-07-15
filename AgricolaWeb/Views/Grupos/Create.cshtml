@@ -1,0 +1,24 @@
+﻿@model AgricolaWeb.Models.Grupos
+
+@{
+    ViewData["Title"] = "Crear Nuevo Grupo";
+    int lotId = ViewData["LotId"] != null ? (int)ViewData["LotId"] : 0;
+}
+
+<h2>Crear Grupo</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="IdLote" value="@ViewData["LotId"]" />
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

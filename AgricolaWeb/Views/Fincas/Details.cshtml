@@ -1,0 +1,46 @@
+﻿@model AgricolaWeb.Models.Finca
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalle</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hectareas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hectareas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index" class="btn btn-primary">Regresar</a>|
+    <a asp-action="GetByFarmId" asp-controller="Lotes" asp-route-farmId="@Model.Id" class="btn btn-primary">Lotes</a>
+</div>

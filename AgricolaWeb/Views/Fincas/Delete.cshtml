@@ -1,0 +1,45 @@
+﻿@model AgricolaWeb.Models.Finca
+
+@{
+    ViewData["Title"] = "Eliminar Finca";
+}
+
+<h1>Eliminar Finca</h1>
+
+<h3>¿Está seguro que desea eliminar esta finca?</h3>
+<div>
+    <h4>Finca</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Ubicación
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Ubicacion
+        </dd>
+        <dt class="col-sm-2">
+            Hectáreas
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Hectareas
+        </dd>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Descripcion
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

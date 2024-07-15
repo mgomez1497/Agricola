@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api_agricola", "Api_agricola\Api_agricola.csproj", "{03034D0C-6232-4EA9-AC76-211BAD031419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgricolaWeb", "AgricolaWeb\AgricolaWeb.csproj", "{C736A65E-BF6D-4BF2-9D54-095521B2EA52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03034D0C-6232-4EA9-AC76-211BAD031419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03034D0C-6232-4EA9-AC76-211BAD031419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03034D0C-6232-4EA9-AC76-211BAD031419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03034D0C-6232-4EA9-AC76-211BAD031419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C736A65E-BF6D-4BF2-9D54-095521B2EA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C736A65E-BF6D-4BF2-9D54-095521B2EA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C736A65E-BF6D-4BF2-9D54-095521B2EA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C736A65E-BF6D-4BF2-9D54-095521B2EA52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C218F45-8FFE-4EA7-8C90-4F2163D4A75D}
+	EndGlobalSection
+EndGlobal

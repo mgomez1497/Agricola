@@ -1,0 +1,22 @@
+﻿@model AgricolaWeb.Models.Grupos
+
+
+@{
+    ViewData["Title"] = "Detalles del grupo";
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Nombre</th>
+        <td>@Model.Nombre</td>
+    </tr>
+</table>
+
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id" asp-route-idLote="@Model.IdLote">Editar</a> |
+    <a asp-action="GetByFarmId" class="btn btn-primary">Regresar</a>|
+</div>

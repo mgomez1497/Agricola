@@ -1,0 +1,45 @@
+﻿@model AgricolaWeb.Models.Lotes
+
+@{
+    ViewData["Title"] = "Eliminar Lote";
+}
+
+<h2>Confirmar eliminación</h2>
+
+<p>¿Estás seguro que deseas eliminar este lote?</p>
+
+
+<div>
+    <h4>Finca</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Ubicación
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Arboles
+        </dd>
+        <dt class="col-sm-2">
+            Hectáreas
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Etapa
+        </dd>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="IdFinca" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
